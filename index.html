@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mc. Vincent G. Cifra - Resume</title>
   <link rel="stylesheet" href="style.css"/>
+  
 </head>
 <body>
+
+
   <div class="resume">
     <div class="left">
       <div class="profile-pic"><img src="resume.png" alt=""></div>
@@ -58,18 +61,33 @@
       </section>
 
       <section>
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>HTML, CSS</li>
-          <li>Laravel Framework (basic proficiency)</li>
-          <li>Computer and printer troubleshooting</li>
-          <li>Software installation and setup</li>
-          <li>Hardware and network issue support</li>
-          <li>Setting up IPs and basic networking</li>
-          <li>System installation & maintenance</li>
-          <li>Tools: VS Code, XAMPP, MS Office</li>
-        </ul>
-      </section>
+  <h3>Technical Skills</h3>
+  <div class="skill">
+    <label>HTML</label>
+    <div class="bar"><div class="fill" style="width: 90%"></div></div>
+  </div>
+  <div class="skill">
+    <label>CSS</label>
+    <div class="bar"><div class="fill" style="width: 85%"></div></div>
+  </div>
+  <div class="skill">
+    <label>Laravel Framework</label>
+    <div class="bar"><div class="fill" style="width: 60%"></div></div>
+  </div>
+  <div class="skill">
+    <label>Computer Troubleshooting</label>
+    <div class="bar"><div class="fill" style="width: 80%"></div></div>
+  </div>
+  <div class="skill">
+    <label>Software Installation</label>
+    <div class="bar"><div class="fill" style="width: 85%"></div></div>
+  </div>
+  <div class="skill">
+    <label>Networking (IP Setup)</label>
+    <div class="bar"><div class="fill" style="width: 60%"></div></div>
+  </div>
+</section>
+
 
       <section>
         <h3>Internship Experience</h3>
@@ -103,4 +121,17 @@
     </div>
   </div>
 </body>
+
+<script>
+  const links = document.querySelectorAll('a:not([download])');
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const url = this.getAttribute('href');
+      document.querySelector('.resume').style.animation = 'fadeOut 0.5s forwards';
+      setTimeout(() => window.location.href = url, 500);
+    });
+  });
+</script>
+
 </html>
